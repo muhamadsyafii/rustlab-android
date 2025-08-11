@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "RustLab"
 include(":app")
- 
+include(":nativeconfig")

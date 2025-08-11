@@ -1,15 +1,75 @@
+# ========================
+# === Android (Gradle) ===
+# ========================
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
+.idea/
 local.properties
+
+# Ignore build output di semua module (modular project)
+**/build/
+**/.gradle/
+
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+
+# =====================
+# === Rust (Cargo) ===
+# =====================
+**/target/
+**/Cargo.lock
+*.so
+*.dll
+*.dylib
+
+# Folder output khusus Rust di Android module
+core/nativeconfig/src/main/jniLibs/
+core/nativeconfig/rust/target/
+
+# =============================
+# === buildSrc (Plugin Dev) ===
+# =============================
+buildSrc/build/
+buildSrc/.gradle/
+
+# =============================
+# === VS Code / JetBrains ===
+# =============================
+.vscode/
+.idea/
+*.sw?
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+
+# ========================
+# === System Files ===
+# ========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.orig
+
+# ======================
+# === macOS specific ===
+# ======================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =====================
+# === Linux specific ==
+# =====================
+*~
+
+# =============================
+# === Kotlin/Java Bytecode ===
+# =============================
+*.class
+out/
