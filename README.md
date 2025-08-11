@@ -236,4 +236,24 @@ Log.d("RustJNI", "Preference Name: $prefName")
 > **Conclusion:**  
 > Rust’s strict compile-time checks and safe-by-default philosophy make it generally more secure than C++ for preventing memory-related vulnerabilities and concurrency issues.
 
+---
+## ⚠️ Important: Update .gitignore for Rust Builds
+When integrating Rust, add the following to your .gitignore:
+```bash
+# =====================
+# === Rust (Cargo) ===
+# =====================
+**/target/
+**/Cargo.lock
+*.so
+*.dll
+*.dylib
+```
+#### Why is this important?
+- 📦 Bloating Repo: target/ can grow to hundreds of MB.
+- 🔓 Leaking Source Code: .rs files could be pushed accidentally.
+- 🐌 Slow Clones: Binary files (.so, .dll, .dylib) make the repo heavy.
+- ⚠️ Merge Conflicts: Cargo.lock changes frequently.
+
+✅ Adding these keeps your repository clean, lightweight, and secure.
 
